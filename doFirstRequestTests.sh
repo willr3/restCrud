@@ -57,5 +57,7 @@ do
 
   podman kill $CID
   podman rm $CID
+  #lets reset output2 and see what happens
+  echo "" > output2 
 done
 
