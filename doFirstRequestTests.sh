@@ -42,8 +42,8 @@ do
   echo $time2
   echo $FR_TIME
   let startMillis=$(date "+%s%N" -d "$time2")/1000000
-  echo $stopMillis
-  echo $startMillis
+  echo "stopMillis=$stopMillis"
+  echo "startMillis=$startMillis"
   let sutime=${stopMillis}-${startMillis}
   echo "First Response Time in ms: $sutime"
 
@@ -59,5 +59,6 @@ do
   podman rm $CID
   #lets reset output2 and see what happens
   echo "" > output2 
+  echo "output2=$(head -1 output2)"
 done
 
