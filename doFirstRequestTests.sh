@@ -42,6 +42,8 @@ do
   echo $time2
   echo $FR_TIME
   let startMillis=$(date "+%s%N" -d "$time2")/1000000
+  echo $stopMillis
+  echo $startMillis
   let sutime=${stopMillis}-${startMillis}
   echo "First Response Time in ms: $sutime"
 
